@@ -70,9 +70,7 @@ RUN export PATH="/opt/miniconda-latest/bin:$PATH" \
     && conda config --system --set show_channel_urls true \
     && sync && conda clean -y --all && sync \
     && conda install -y -q --name base \
-           "python=3" \
-           "numpy" \
-           "scipy" \
+           "python=3.7" \
            "cython" \
     && sync && conda clean -y --all && sync \
     && bash -c "source activate base \
@@ -132,9 +130,7 @@ RUN echo '{ \
     \n        "use_env": "base", \
     \n        "activate": true, \
     \n        "conda_install": [ \
-    \n          "python=3", \
-    \n          "numpy", \
-    \n          "scipy", \
+    \n          "python=3.7", \
     \n          "cython" \
     \n        ], \
     \n        "pip_install": [ \
